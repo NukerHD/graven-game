@@ -25,6 +25,8 @@ class Player(Entity):
     def damage(self, amount):
         if self.health - amount > amount:
             self.health -= amount
+        else:
+            self.game.game_over()
 
     def launch_projectile(self):
         self.projectiles.add(Projectile(self))
