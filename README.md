@@ -1,6 +1,6 @@
 # graven-game
 
-###Objective:
+### Objective:
 Remake Graven's game
 
 ### Links: 
