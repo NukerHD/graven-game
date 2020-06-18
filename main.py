@@ -17,11 +17,14 @@ while running:
     display.blit(background, (0, 0))
     display.blit(game.player.image, game.player.rect)
 
+    game.player.update_health_bar(display)
+
     for projectile in game.player.projectiles:
         projectile.move()
 
     for monster in game.monsters:
         monster.forward()
+        monster.update_health_bar(display)
 
     game.player.projectiles.draw(display)
     game.monsters.draw(display)

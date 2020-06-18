@@ -27,8 +27,9 @@ class Projectile(pygame.sprite.Sprite):
         self.rect.x += self.velocity
         self.rotate()
 
-        if self.player.game.check_collision(self, self.player.game.monsters):
+        for monster in self.player.game.check_collision(self, self.player.game.monsters):
             self.remove()
+            monster.damage(self.player.attack)
 
         # ToDo: set value to screen width
         if self.rect.x > 1080:
