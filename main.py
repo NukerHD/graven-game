@@ -20,7 +20,11 @@ while running:
     for projectile in game.player.projectiles:
         projectile.move()
 
+    for monster in game.monsters:
+        monster.forward()
+
     game.player.projectiles.draw(display)
+    game.monsters.draw(display)
 
     if game.pressed.get(pygame.K_RIGHT) and game.player.rect.x + game.player.rect.width < display.get_width():
         game.player.move_right()
