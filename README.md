@@ -1,5 +1,8 @@
 # graven-game
 
+### Setup
+Install [pygame](https://www.pygame.org/): pip install pygame
+
 ### Objective:
 Remake Graven's game
 
